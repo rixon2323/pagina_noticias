@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #003366;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        main {
+            display: flex;
+            padding: 20px;
+        }
+
+        .noticia {
+            flex: 2;
+            margin-right: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .noticia img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .noticia h2, .noticia h3 {
+            color: #003366;
+            margin-bottom: 10px;
+        }
+
+        .noticia p {
+            line-height: 1.6;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        aside {
+            flex: 1;
+            background-color: #f0f8ff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .noticia-resumen {
+            cursor: pointer;
+            padding: 10px;
+            background: #e4e4e4;
+            margin: 5px 0;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .noticia-resumen:hover {
+            background: #d4d4d4;
+        }
+
+        .noticia-seleccionada {
+            background: #ffa;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #003366;
+            color: white;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The Watermelon</h1>
+        <nav>
+            <a href="#">Venezuela</a>
+            <a href="#">Mundo</a>
+            <a href="#">Economía</a>
+            <a href="#">Deportes</a>
+            <a href="#">Ciencia</a>
+            <a href="#">Tecnología</a>
+            <a href="#">Entretenimiento</a>
+        </nav>
+    </header>
+    <main>
+        <article class="noticia" id="noticia2">
+            <h2>Colombia en situación de desastre por las fuertes lluvias e inundaciones</h2>
+            <img src="C:\xampp\htdocs\pagina w\imagenes\noticias/tarek.jpg" alt="Tarek William Saab: En Venezuela no hay niños detenidos, hay adolescentes">
+            <p>El fiscal general de Venezuela, Tarek William Saab, afirmó este lunes a la prensa que en Venezuela no hay niños detenidos tras las protestas postelectorales, pero a la vez reconoció que los menores tras las rejas son “unos pocos” adolescentes cuyas edades oscilan entre los 16 y 17 años.</p>
+            
+            <p>El fiscal afirmó que esos jóvenes están siendo judicializados con las garantías correspondientes, y aseguró que los familiares de los adolescentes detenidos han sido atendidos por el Ministerio Público y que “todos sin excepción incluyendo los adultos, han tenido visita de los fiscales adscritos a la Dirección General de Protección a los Derechos Humanos”. También dijo que se les han realizado exámenes médicos para verificar su estado de salud..</p>
+            
+            <p>Saab rechazó además que haya adolescentes detenidos en instalaciones militares. Afirmó que están alojados en lugares de reclusión para adolescentes. Y que han sido atendidos en sus derechos humanos, en su salud y que con ellos se ha estado hablando. “Se les han tenido consideraciones” afirmó.</p>
+            
+            <h3>Familiares de jóvenes detenidos en Venezuela exigen su liberación</h3>
+            <p>El fiscal no contestó a la pregunta de la prensa sobre cuántos menores permanecen detenidos.</p>
+            
+            <p>En respuesta, el presidente Nicolás Maduro llamó este lunes a Saab y a los jueces del país a “rectificar y revisar” los casos de detenidos en las protestas en los cuales se pudo haber dado “algún tipo de error procedimental”.</p>
+            
+            <p>“En el caso que haya habido algún tipo de error procedimental, etc., se han visto casos porque fue un momento de un disturbio como loco, 29 y 30 de julio, violencia por aquí, violencia por allá y, de repente, llegó la paz”, dijo en su programa semanal en la televisora estatal VTV.</p>
+            
+            <p><strong>Por EFE | Noviembre 15, 2024</strong></p>
+        </article>
+        <aside>
+            <h3>MINUTO A MINUTO</h3>
+            <ul>
+                <li class="noticia-resumen" onclick="selectNoticia(this)">Pinilla: Niños presos políticos</li>
+                <li class="noticia-resumen" onclick="selectNoticia(this)">La maleta</li>
+                <li class="noticia-resumen" onclick="selectNoticia(this)">Venezuela sorprende al empatar 1-1 a Brasil</li>
+            </ul>
+        </aside>
+    </main>
+    <footer>
+        <p>&copy; 2024 El Nacional. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        function selectNoticia(element) {
+            const noticiasResumen = document.querySelectorAll('.noticia-resumen');
+            noticiasResumen.forEach(n => n.classList.remove('noticia-seleccionada'));
+            element.classList.add('noticia-seleccionada');
+        }
+    </script>
+</body>
+</html>
+```

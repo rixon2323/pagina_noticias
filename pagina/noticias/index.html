@@ -1,0 +1,95 @@
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>The Watermelon</title>  
+    <style>  
+        body { font-family: Arial, sans-serif; margin: 0; background-color: #f9f9f9; }  
+        header { background-color: #003366; color: rgb(255, 255, 255); padding: 20px; text-align: center; }  
+        nav { background-color: #ffffff; padding: 10px; text-align: center; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }  
+        nav a { margin: 0 15px; text-decoration: none; color: #003366; font-weight: bold; }  
+        .hero { background-image: url('imagenes/fondo/fondo.jpeg'); background-size: cover; color: rgb(0, 0, 0); padding: 100px 20px; text-align: center; border-radius: 8px; }  
+        .hero h1 { font-size: 2.5em; }  
+        .hero p { font-size: 1.2em; }  
+
+        .main-content { display: flex; padding: 20px; }  
+        .featured-news { flex: 2; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }  
+        .news-item { background-color: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; cursor: pointer; text-decoration: none; color: inherit; }  
+        .news-item img { width: 100%; height: auto; }  
+        .news-item h3 { margin: 10px; font-size: 1.2em; color: #333; }  
+        .news-item p { margin: 0 10px 10px; font-size: 0.9em; color: #555; }  
+        .news-item.selected { background-color: #ffa; }  /* Color al seleccionar la noticia */  
+
+        .sidebar { flex: 1; padding-left: 20px; }  
+        .sidebar h3 { margin: 10px 0; color: #003366; }  
+        .sidebar p { background-color: #e7f1ff; padding: 10px; border-radius: 5px; }  
+        
+        footer { background-color: #003366; color: white; text-align: center; padding: 10px 0; }  
+    </style>  
+</head>  
+<body>  
+    <header>  
+        <h1>The Watermelon</h1>  
+    </header>  
+    
+    <nav>  
+        <a href="#">VENEZUELA</a>  
+        <a href="#">MUNDO</a>  
+        <a href="#">ECONOMÍA</a>  
+        <a href="#">DEPORTES</a>  
+        <a href="#">CINE</a>  
+    </nav>  
+
+    <div class="hero">  
+        <h1>Premian a María Corina Machado con la Medalla de la Democracia 2024</h1>  
+        <p>Nov 11, 2024</p>  
+    </div>  
+
+    <div class="main-content">  
+        <div class="featured-news">  
+            <h2 style="text-align: center;">Noticias Destacadas</h2>  
+            <a class="news-item" href="" onclick="selectNoticia(this)">  
+                <img src="../imagenes/noticias/colombia.png" alt="Colombia en situación de desastre">  
+                <h3>Colombia en situación de desastre por las fuertes lluvias e inundaciones</h3>  
+                <p>Descripción breve de la noticia destacada...</p>  
+            </a>  
+            <a class="news-item" href="noticias.data/noticia-tarek.html" onclick="selectNoticia(this)">  
+                <img src="../imagenes/noticias/tarek.jpg" alt="Tarek William Saab">  
+                <h3>Tarek William Saab: En Venezuela no hay niños detenidos, hay adolescentes</h3>  
+                <p>Descripción breve de la noticia destacada...</p>  
+            </a>  
+            <a class="news-item" href="noticias.data/noticia-edmundo.html" onclick="selectNoticia(this)">  
+                <img src="../imagenes/noticias/edmundo.jpg" alt="Edmundo González en Bruselas">  
+                <h3>Edmundo González en Bruselas: El 10 de enero estaremos tomando posesión del nuevo gobierno en Venezuela</h3>  
+                <p>El líder opositor venezolano se reunirá con Josep Borrell para agradecer personalmente a la Unión Europea su apoyo para restaurar la democracia en el país.</p>  
+            </a>  
+            <a class="news-item" href="pagina4.html" onclick="selectNoticia(this)">  
+                <img src="C:\Users\rixon\OneDrive\Documentos\pagina w\imagenes\noticias\España.webp" alt="Inundaciones en España">  
+                <h3>En imágenes: España en alerta por una nueva DANA que está causando inundaciones en la costa mediterránea del país</h3>  
+                <p>Las tormentas que se avecinan también obligaron a suspender las labores de rescate de los equipos que siguen buscando desaparecidos frente a las costas de Valencia, según informó el servicio de salvamento marítimo español.</p>  
+            </a>  
+        </div>  
+        
+        <aside class="sidebar">  
+            <h3>Suscríbete</h3>  
+            <p>¿Te gustaría recibir nuestro boletín informativo? Suscríbete gratis registrando tus datos.</p>  
+        </aside>  
+    </div>  
+
+    <footer>  
+        <p>&copy; 2024 The Watermelon. Todos los derechos reservados.</p>  
+    </footer>  
+    
+    <script>  
+        function selectNoticia(element) {  
+            // Quitar la selección a todas las noticias  
+            const newsItems = document.querySelectorAll('.news-item');  
+            newsItems.forEach(item => item.classList.remove('selected'));  
+
+            // Añadir la clase de selección al elemento clicado  
+            element.classList.add('selected');  
+        }  
+    </script>  
+</body>  
+</html>
