@@ -87,3 +87,38 @@ footer {
     text-align: center;   
     padding: 10px 0;   
 }
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  body {
+    padding: 0 10px;
+  }
+  
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .noticia-principal, .noticias-secundarias {
+    flex-direction: column;
+  }
+  
+  .noticia {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  p {
+    font-size: 0.9rem;
+  }
+}
